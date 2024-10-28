@@ -1,0 +1,477 @@
+/* 課題5のCSS！！ */
+
+*,body,html {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* gooleフォントをbody(全体)に適用させる */
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* headerの設定 */
+header {
+  position: fixed ;
+  background-color: #BEA574;              /* ヘッダー①　課題で指定あり */
+  width: 100%;
+  padding: 5px 0; 
+  z-index: calc(infinity);
+
+}
+
+ .header_content {
+  max-width: 800px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.header_menu ul{
+  display: flex;
+  width: 400px;
+  justify-content: space-between; 
+
+}
+
+ #logo >img{
+  width: 100px;                           /* ヘッダー⑤　課題で指定あり */
+  height: auto;                           /* auto設定することで自動で高さを調整してくれる */
+  margin-left: 8px;
+} 
+
+.header_menu li,a {
+  display: block;
+  text-decoration: none;
+  color: #fff; 
+  font-size: 16px;                        /* ヘッダー④　課題で指定あり */
+} 
+
+
+header a:hover {
+  opacity: 50%;
+  transition: 0.3s;                       /* ヘッダー選択肢がゆっくり色が変わる */
+}
+
+/* headerにswiperが隠れてしまうため */
+main {
+  padding-top: 60px;
+} 
+
+.swiper {
+  padding-top: 100px;
+}
+
+.swiper-pagination {
+  --swiper-pagination-color: #BEA574;  /* ページネーション、アクティブ時のドットの色 */
+  /* --swiper-pagination-size:16px */
+}
+
+.swiper--wrapper {
+  /* wrapperのサイズを調整 */
+  width: 100%;
+  height: 300px;
+}
+
+/* .swiper-slide {
+  /* スライドのサイズを調整、中身のテキスト配置調整、背景色 */
+  /* color: #ffffff;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 300px;
+  text-align: center; */
+/* } */ */
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 0 0 10px !important;
+  background: #333 !important;
+}
+
+.swiper-pagination-bullet:first-child {
+  margin: 0 !important;
+}
+
+
+#schedule,#access,#reservation {
+  max-width: 800px;
+  margin: 0 auto;
+ }   
+
+/* サービス欄 */
+#text-center {
+  text-align: center;
+}
+
+/* キャッチコピー */
+.catchphrase {
+  font-size: 24px;        
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 48px;
+
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+  height: 50px;
+  width: 50px;
+}
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "" !important;
+  height: 50px;
+  margin: auto;
+  width: 50px;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev::after {
+  background-image: url(../img/slide-btn-prev.svg);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  background-image: url(../img/slide-btn-next.svg);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+.catchphrase >a  {
+  text-align: center;
+  margin-top: 16px;
+
+}
+
+.catchphrase >h1>.summer {
+  font-size: 60px;
+  color: red;
+
+}
+
+.sercive_title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-top: 60px;
+}
+
+.map {
+  text-align: center;
+}
+
+
+.schedule {
+  display: flex;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+
+.day {
+  width: 250px;
+  text-align: center;
+  border: 1px solid gray;
+  padding: 10px 20px;
+}
+
+#one_day,#two_day,#three_day {
+  background-color: #dcdcdc;
+}
+
+/* 色が変わる */
+#one_day.active{
+  background-color: #BEA574;
+  opacity: 100%;
+  color: white;
+  transition: 0.5s/* 『ゆっくりと』色が変わる */
+}
+
+#two_day.active{
+  background-color: #BEA574;
+  opacity: 100%;
+  color: white;
+  transition: 0.5s/* 『ゆっくりと』色が変わる */
+}
+
+#three_day.active{
+  background-color:  #BEA574;
+  opacity: 100%;
+  color: white;
+  transition: 0.5s/* 『ゆっくりと』色が変わる */
+} 
+
+#one_day:hover,
+#two_day:hover,
+#three_day:hover{
+  opacity: 50%;
+  transition: 0.5s/* 『ゆっくりと』色が変わる */
+} 
+
+.description_text.active {
+  display: block;
+}
+
+.description_text {
+  display: none;
+}
+
+#schedule, #access, #reservation {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0px 8px;
+}
+
+.description {
+  max-width: 800px;
+  /* border: 1px solid gray; */
+  /* margin: 5px; */
+  padding: 32px;
+  margin-bottom: 16px;
+  box-shadow: 2px 3px 5px gray;
+  display: block;
+  margin: 0 auto;
+}
+
+
+#reservation {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+#form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 8px;
+  
+}
+
+/* form欄を100％表示する */
+input, select {
+  font-size: 24px;
+  width: 100%;
+  padding: 8px 0;
+}
+/* .form_hinagata {
+  width: 300px;
+  margin: 0 auto;
+} 
+
+.form_hinagata>label,input,select {
+  font-size: 24px;
+  width: 100%;
+  padding: 8px 0;
+
+}*/
+
+.form_item {
+  margin-bottom: 16px;
+}
+
+
+/* 以下座席予約 */
+.placeholder {
+  font-size: 8px;
+  color: red;
+}
+
+.any {
+  font-size: 8px;
+  color: grey;
+}
+
+.button_submit {
+  /* opacity: 50%; */
+  background-color: #BEA574;
+  color: white;
+  border: none;
+}
+
+
+
+/* ここからconfirm画面のCSS */
+#contents_confirm {
+  padding-top: 60px;
+  max-width: 800px;
+  margin: 0 auto;
+  }
+
+table {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+.comfirm_content_label {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 8px;
+} 
+
+.comfirm_form {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 8px;
+  /* display: inline-block; */
+  display:flex;
+  justify-content: space-between;
+} 
+
+.button_back,.button_send {
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+.button_send {
+  background-color: #BEA574;
+  color: white;
+  border: none;
+  border-radius:8px 8px 8px 8px;
+  padding: 3px 10px;
+
+}
+
+.button_back {
+    background-color: #c5c5c5;
+    color: white;
+    border: none;
+    border-radius:8px 8px 8px 8px;
+    padding: 3px 10px;
+  }
+
+/* ハンバーガーメニュー */
+.hamburger-menu {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border: none;
+  background: transparent;
+  appearance: none;
+  padding: 0;
+  cursor: pointer;
+}
+.hamburger-menu__bar {
+  display: inline-block;
+  width: 44%;
+  height: 2px;
+  background: white;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: .5s;
+}
+.hamburger-menu__bar:first-child {
+  top: 16px;
+}
+.hamburger-menu__bar:nth-child(2) {
+  top: 24px;
+}
+.hamburger-menu__bar:last-child {
+  top: 32px;
+}
+.hamburger-menu--open .hamburger-menu__bar {
+  top: 50%;
+}
+.hamburger-menu--open .hamburger-menu__bar:first-child {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.hamburger-menu--open .hamburger-menu__bar:last-child {
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+.hamburger-menu--open .hamburger-menu__bar:nth-child(2) {
+  display: none;
+}
+.navigation {
+  display: none;
+  background: #BEA574;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  z-index: 9999;
+}
+.navigation__list {
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation__list-item {
+  border-bottom: solid 1px white;
+}
+.navigation__list-item:first-child {
+  border-top: solid 1px white;
+}
+.navigation__link {
+  /* color: #fff; */
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  padding: 24px 0;
+  transition: .5s;
+}
+
+footer {
+  width: 100%;
+  height: 50px;
+  background: #BEA574;
+  z-index: calc(infinity);
+  }
+
+.footer_logo{
+  width: 100px;
+  margin:0 auto;
+}
+
+  .footer_logo >img{
+    width: 100px;                           /* ヘッダー⑤　課題で指定あり */
+    height: auto; 
+  }
+
+  /* ウィンドウがの幅が630px以下の場合に適用する */
+  @media screen and (min-width: 820px) {
+    /*PC時非表示にする*/
+    .hamburger {
+      display: none;
+    }
+
+  }
+  @media screen and (max-width: 820px) {
+    /*PC時非表示にする*/
+  .header_menu ul {
+    display: none;
+  }
+
+  .catchphrase {
+    font-size: 16px;  
+  }
+
+  .catchphrase >h1>.summer {
+    font-size: 40px;
+    color: red;
+  }
+  .map>iframe{
+    width:400px;
+    height: 300px;
+  }
+}
