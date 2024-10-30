@@ -12,7 +12,7 @@
     <div class="swiper-pagination"></div>
 
     <!-- ｢前へ｣｢次へ｣の矢印 -->
-    <div class="swiper-button-prev"></div>
+    <div class=""></div>
     <div class="swiper-button-next"></div>
 </div>
   

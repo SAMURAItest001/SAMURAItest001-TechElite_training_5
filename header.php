@@ -23,9 +23,9 @@
       <div class="header_menu">
         <nav>
           <ul class="navigation__list-item-ul">
-            <li><a href="index.php#schedule">スケジュール</a></li>
-            <li><a href="index.php#access">アクセス</a></li>
-            <li><a href="index.php#reservation">席予約</a></li>
+            <li><a href="#schedule">スケジュール</a></li>        <!-- href="#index.php#schedule">となっていたためスクロールされていなかった  -->
+            <li><a href="#access">アクセス</a></li>             <!-- href="#index.php#access">となっていたためスクロールされていなかった  -->
+            <li><a href="#reservation">席予約</a></li>          <!-- href="#index.php#reservation">となっていたためスクロールされていなかった  -->
           </ul>
         </nav>
     </div> 
@@ -37,9 +37,9 @@
     </button>
     <nav class="navigation">
       <ul class="navigation__list">
-        <li class="navigation__list-item"><a href="index.php#schedule" class="navigation__link">スケジュール</a></li>
-        <li class="navigation__list-item"><a href="index.php#access" class="navigation__link">アクセス</a></li>
-        <li class="navigation__list-item"><a href="index.php#reservation" class="navigation__link">席予約</a></li>
+        <li class="navigation__list-item"><a href="#schedule" class="navigation__link">スケジュール</a></li>
+        <li class="navigation__list-item"><a href="#access" class="navigation__link">アクセス</a></li>
+        <li class="navigation__list-item"><a href="#reservation" class="navigation__link">席予約</a></li>
       </ul>
     </nav> 
 <!-- ここまでハンバーガーメニュー -->
