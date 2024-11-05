@@ -13,14 +13,15 @@
 
     <!-- ｢前へ｣｢次へ｣の矢印 -->
     <div class=""></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"><img src="../img/slide-btn-prev.svg" alt=""/></div>
+    <div class="swiper-button-next"><img src="../img/slide-btn-next.svg" alt=""/></div>
 </div>
   
 
   <!-- キャッチコピー -->
   <div>
     <div class="catchphrase">
-      <h1>今年も始まる<span class="summer">夏祭り</span></h1>
+      <h1 class="catchphrase_summer">今年も始まる<span class="summer">夏祭り</span></h1>
     </div>
 
 

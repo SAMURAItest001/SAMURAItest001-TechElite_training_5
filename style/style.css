@@ -11,7 +11,7 @@
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  /* font-weight: 400; */
   font-style: normal;
 }
 
@@ -65,13 +65,9 @@ main {
   padding-top: 60px;
 } 
 
-.swiper {
-  padding-top: 100px;
-}
-
 .swiper-pagination {
   --swiper-pagination-color: #BEA574;  /* ページネーション、アクティブ時のドットの色 */
-  /* --swiper-pagination-size:16px */
+  --swiper-pagination-size:16px
 }
 
 .swiper--wrapper {
@@ -91,8 +87,8 @@ main {
 /* } */ */
 
 .swiper-pagination-bullet {
-  width: 12px !important;
-  height: 12px !important;
+  width: 16px !important;
+  height: 16px !important;
   margin: 0 0 0 10px !important;
   background: #333 !important;
 }
@@ -101,6 +97,10 @@ main {
   margin: 0 !important;
 }
 
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+}
 
 #schedule,#access,#reservation {
   max-width: 800px;
@@ -114,11 +114,11 @@ main {
 
 /* キャッチコピー */
 .catchphrase {
-  font-size: 24px;        
+  /* font-size: 24px; */
   color: #000;
-  font-weight: bold;
+  font-weight: bolder;
   text-align: center;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
 
 }
 
@@ -134,31 +134,35 @@ main {
   background-repeat: no-repeat;
   background-size: contain;
   content: "" !important;
-  height: 50px;
   margin: auto;
+  /* width: 40px;
+  height: auto; */
+}
+
+.swiper-button-prev img {
   width: 50px;
+  height: auto; 
 }
-/* 前への矢印カスタマイズ */
-.swiper-button-prev::after {
-  background-image: url(../img/slide-btn-prev.svg);
+
+
+.swiper-button-next img {
+  width: 50px;
+  height: auto; 
 }
-/* 次への矢印カスタマイズ */
-.swiper-button-next::after {
-  background-image: url(../img/slide-btn-next.svg);
-}
+
 /* 画像サイズ調整 */
 .swiper-slide img {
   height: auto;
   width: 100%;
 }
 
-.catchphrase >a  {
-  text-align: center;
-  margin-top: 16px;
-
+.catchphrase_summer {
+  /* font-weight:bold; */
+  font-size: 24px;
 }
 
-.catchphrase >h1>.summer {
+
+.catchphrase_summer >.summer {
   font-size: 60px;
   color: red;
 
@@ -308,7 +312,9 @@ input, select {
   border: none;
 }
 
-
+.tel_validation {
+  color: red;
+}
 
 /* ここからconfirm画面のCSS */
 #contents_confirm {
@@ -321,6 +327,14 @@ table {
   max-width: 400px;
   margin: 0 auto;
   padding: 8px;
+}
+
+.sercive_title_confirm{
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .comfirm_content_label {
@@ -464,14 +478,38 @@ footer {
 
   .catchphrase {
     font-size: 16px;  
+    font-weight:bold
   }
 
   .catchphrase >h1>.summer {
     font-size: 40px;
     color: red;
+    font-weight:bold
   }
   .map>iframe{
     width:400px;
     height: 300px;
   }
+}
+
+@media screen and (max-width: 420px) {
+  /*PC時非表示にする*/
+/* .header_menu ul {
+  display: none;
+}
+
+.catchphrase {
+  font-size: 16px;  
+  font-weight:bold
+}
+
+.catchphrase >h1>.summer {
+  font-size: 40px;
+  color: red;
+  font-weight:bold
+} */
+.map>iframe{
+  width:250px;
+  height: 150px;
+}
 }

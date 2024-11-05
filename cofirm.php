@@ -2,7 +2,7 @@
 
 <div id="contents_confirm">
   <div class="section_confirm">
-    <h2 class="sercive_title">お問合せ内容</h2>
+    <h2 class="sercive_title_confirm">お問合せ内容</h2>
     <table clss="table_comfirm">
         <tr>
           <td class="comfirm_content_label">お名前</td>
@@ -27,7 +27,7 @@
     <input type="hidden" name="seat" value="<?php echo $_POST["seat"] ?>">
     <input type="hidden" name="email" value="<?php echo $_POST["email"] ?>">
     <input type="hidden" name="tel" value="<?php echo $_POST["tel"] ?>">
-    <button class="button_back" type="submit back" formaction="./index.php#contact">戻る</button>
+    <button class="button_back" type="submit back" formaction="./index.php#reservation">戻る</button>
     <button class="button_send" type="submit" formaction="./send.php">送信</button>
 </form>
 </div>
