@@ -35,49 +35,34 @@ $(document).ready(function() {
   });
 });
 
-$('form').submit(function() {
-  let tel = $('input[type="tel"]').val(); // 【09月26日　課題四で追加】半角スペースを消しました。
-    if(tel){
-      const regex = /^0\d{9,10}$/
-       if(!regex.test(tel)) {
-         $(".tel_validation").css("display","block");
-         validation_flg = true
-    }else
-    {
-//エラーじゃないのにメッセージがあったら
-$(".tel_validation").remove();
-    }
-    }
-    if(validation_flg) {
-      return false;
-   }
-})
 
-// const form = document.getElementById(".form");
-// const button = document.getElementById(".button_submit");
-
-// form.addEventListener("input", update);
-// form.addEventListener("iselect", update);
-
-// function update() {
-//   const isRequired = form.checkValidity();
-
-//   if (isRequired) {
-//     button.disabled = false;
-//     button.style.opacity = 1;
-//     return;
-//   }
-// }
+// $('form').submit(function() {
+//   let tel = $('input[type="tel"]').val(); // 【09月26日　課題四で追加】半角スペースを消しました。
+//     if(tel){
+//       const regex = /^0\d{9,10}$/
+//        if(!regex.test(tel)) {
+//          $(".tel_validation").css("display","block");
+//          validation_flg = true
+//     }else
+//     {
+// //エラーじゃないのにメッセージがあったら
+// $(".tel_validation").remove();
+//     }
+//     }
+//     if(validation_flg) {
+//       // return false;
+//    }
+// })
 
 // 名前、席の場所、メールアドレスの必須項目（送信できないようにする）
 $(document).ready(function() {
   validation();
-  $('form input,select').on('change',function(){
+  $('form input, form select').on('input change',function(){
     validation();
   });
 
 function validation(){
-  let select = $("serect").val();
+  let select = $("select").val();
   let tel = $('input[name="tel"]').val();
   let tel_validation = true;
   if(tel){
@@ -91,12 +76,11 @@ function validation(){
   if(
     $('input[name="name"]').val() !== ""&&
     $('input[name="email"]').val() !== ""&&
-    select  !== ""&&
+    $('select[name="seat]').val() !== ""&&
     tel_validation
   ){
     $('input[name="submit"]').prop("disabled",false);
     $(".button_submit").css("opacity","1");
-  }else{
   }
 }
 });

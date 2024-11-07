@@ -21,7 +21,7 @@
   <!-- キャッチコピー -->
   <div>
     <div class="catchphrase">
-      <h1 class="catchphrase_summer">今年も始まる<span class="summer">夏祭り</span></h1>
+      <p class="catchphrase_summer">今年も始まる<span class="summer">夏祭り</span></>
     </div>
 
 
@@ -78,7 +78,7 @@
           <div class="form_item">
             <label for=seat>席の場所<span class="placeholder">※必須</span></label><br>
               <select name="seat" id="seat" required>
-                  <option >---</option>
+                  <option value="">---</option>
                   <option <?= $seat=filter_input(INPUT_POST,'seat') == "SS席" ? "selected":""?> value="SS席">SS席
                   <option <?= $seat=filter_input(INPUT_POST,'seat') == "S席" ? "selected":""?> value="S席">S席
                   <option <?= $seat=filter_input(INPUT_POST,'seat') == "A席" ? "selected":""?> value="A席">A席
@@ -100,7 +100,7 @@
           <div class="form_item">
             <input type="submit" class="button_submit" name="submit" value="送信" style="opacity:0.5" disabled><br>
           </div>
-        </form>
+        </form> 
       </div>
     </div> 
   </div>

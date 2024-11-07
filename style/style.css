@@ -11,7 +11,7 @@
 body {
   font-family: "Noto Sans JP", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: 400; */
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -112,16 +112,6 @@ main {
   text-align: center;
 }
 
-/* キャッチコピー */
-.catchphrase {
-  /* font-size: 24px; */
-  color: #000;
-  font-weight: bolder;
-  text-align: center;
-  /* margin-bottom: 48px; */
-
-}
-
 /* 前へ次への矢印カスタマイズ */
 .swiper-button-prev,
 .swiper-button-next {
@@ -156,9 +146,18 @@ main {
   width: 100%;
 }
 
+/* キャッチコピー */
+.catchphrase {
+  /* font-size: 24px; */
+  color: #000;
+  text-align: center;
+  /* margin-bottom: 48px; */
+
+}
+
 .catchphrase_summer {
-  /* font-weight:bold; */
   font-size: 24px;
+  font-weight:bold;
 }
 
 
