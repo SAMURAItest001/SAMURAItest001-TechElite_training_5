@@ -76,7 +76,7 @@ function validation(){
   if(
     $('input[name="name"]').val() !== ""&&
     $('input[name="email"]').val() !== ""&&
-    $('select[name="seat]').val() !== ""&&
+    $('select[name="seat"]').val() !== ""&&
     tel_validation
   ){
     $('input[name="submit"]').prop("disabled",false);
