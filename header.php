@@ -18,7 +18,7 @@
   <header>
     <div class="header_content">
       <div>
-        <a href="" id="logo"><img src="./img/logo.png" alt="トップページに戻る"></a>
+        <a href="/index.php" id="logo"><img src="./img/logo.png" alt="トップページに戻る"></a> <!--  href="/index.php"を追記  -->
       </div>
       <div class="header_menu">
         <nav>
