@@ -17,44 +17,24 @@ $(function() {
   });
 });
 
-// ページ内のスムーススクロール
-jQuery(function () {
-  jQuery('a[href*="#"]').click(function (e) {
-    const target = jQuery(this.hash === "" ? "html" : this.hash);
-    if (target.length) {
-      e.preventDefault();
-      const headerHeight = jQuery("header").outerHeight();
-      const position = target.offset().top - headerHeight - 20;
-      jQuery("html, body").animate({ scrollTop: position }, 500, "swing");
-
-      if (!target.is("html")) {
-        // URLにハッシュを含める
-        history.pushState(null, '', this.hash);
-      }
-    }
+$(document).ready(function() {
+  $('.header_menu a[href^="#"]').click(function(){
+    // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
+    var adjust = 0;
+    // スクロールの速度（ミリ秒）
+    var speed = 400;
+    // アンカーの値取得 リンク先（href）を取得して、hrefという変数に代入
+    var href= $(this).attr("href");
+    // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    // 移動先を調整 idの要素の位置をoffset()で取得して、positionに代入
+    var position = target.offset().top + adjust;
+    // スムーススクロール linear（等速） or swing（変速）
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
   });
 });
-
-// 別ページ遷移後のスムーススクロール
-const urlHash = location.hash;
-if (urlHash) {
-  const target = jQuery(urlHash);
-  if (target.length) {
-    // ページトップから開始（ブラウザ差異を考慮して併用）
-    history.replaceState(null, '', window.location.pathname);
-    jQuery("html,body").stop().scrollTop(0);
-
-    jQuery(window).on("load", function () {
-      const headerHeight = jQuery("header").outerHeight();
-      const position = target.offset().top - headerHeight - 20;
-      jQuery("html, body").animate({ scrollTop: position }, 500, "swing");
-
-      // ハッシュを再設定
-      history.replaceState(null, '', window.location.pathname + urlHash);
-    });
-  }
-}
-
+  
 
 // $('form').submit(function() {
 //   let tel = $('input[type="tel"]').val(); // 【09月26日　課題四で追加】半角スペースを消しました。
@@ -86,10 +66,10 @@ function validation(){
   let tel = $('input[name="tel"]').val();
   let tel_validation = true;
   if(tel){
-    const regex = /^0\d{9,10}$/
-       if(!regex.test(tel)) {
+    const regexp = /^0\d{9,10}$/
+       if(!regexp.test(tel)) {
          $(".tel_validation").css("display","block");
-         validation_flg = false;
+         tel_validation = false;
   }
 }
 
@@ -101,6 +81,11 @@ function validation(){
   ){
     $('input[name="submit"]').prop("disabled",false);
     $(".button_submit").css("opacity","1");
+    $(".tel_validation").css("display","none");
+  }
+  else{
+    $('input[name="submit"]').prop("disabled",true);
+    $(".button_submit").css("opacity","0.5");
   }
 }
 });
