@@ -18,12 +18,12 @@
   <header>
     <div class="header_content">
       <div>
-        <a href="/index.php" id="logo"><img src="./img/logo.png" alt="トップページに戻る"></a> <!--  href="/index.php"を追記  -->
+        <a href="./index.php" id="logo"><img src="./img/logo.png" alt="トップページに戻る"></a> <!--  href="/index.php"を追記  -->
       </div>
       <div class="header_menu">
         <nav>
           <ul class="navigation__list-item-ul">
-          <?php $baseUrl = './index.php'; // ベースURLを設定 ?>
+          <?php $baseUrl = '/index.php'; // ベースURLを設定 ?>
           <ul class="navigation__list-item-ul">
             <li><a href="<?= $baseUrl ?>#schedule">スケジュール</a></li>
             <li><a href="<?= $baseUrl ?>#access">アクセス</a></li>

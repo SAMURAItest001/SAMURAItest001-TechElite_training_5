@@ -31,10 +31,9 @@ $(document).ready(function() {
 
     // スクロール位置を取得
     var position = target.offset().top + adjust;
-
+    
     // スムーススクロール実行
     $('body,html').animate({ scrollTop: position }, speed, 'swing');
-
     return false; // デフォルトのリンク動作を無効化
   });
 });
