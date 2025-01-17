@@ -39,9 +39,9 @@
     </button>
     <nav class="navigation">
       <ul class="navigation__list">
-        <li class="navigation__list-item"><a href="#schedule" class="navigation__link">スケジュール</a></li>
-        <li class="navigation__list-item"><a href="#access" class="navigation__link">アクセス</a></li>
-        <li class="navigation__list-item"><a href="#reservation" class="navigation__link">席予約</a></li>
+        <li class="navigation__list-item"><a href="<?= $baseUrl ?>#schedule" class="navigation__link">スケジュール</a></li>
+        <li class="navigation__list-item"><a href="<?= $baseUrl ?>#access" class="navigation__link">アクセス</a></li>
+        <li class="navigation__list-item"><a href="<?= $baseUrl ?>#reservation" class="navigation__link">席予約</a></li>
       </ul>
     </nav> 
 <!-- ここまでハンバーガーメニュー -->
