@@ -18,21 +18,24 @@ $(function() {
 });
 
 $(document).ready(function() {
-  $('.header_menu a[href^="/#"]').click(function(){
-    // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
-    var adjust = 0;
-    // スクロールの速度（ミリ秒）
-    var speed = 400;
-    // アンカーの値取得 リンク先（href）を取得して、hrefという変数に代入
-    var href= $(this).attr("href");
-    href = href.replace("/#", "#");                 // スラッシュを消す！
-    // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
+  $('.header_menu a[href^="./index.php#"]').click(function() {
+    var adjust = 0; // 調整値
+    var speed = 400; // スクロール速度
+    var href = $(this).attr("href");
+
+    // '/index.php#' を '#' に置き換える
+    href = href.replace("./index.php#", "#");
+
+    // 移動先を取得
     var target = $(href == "#" || href == "" ? 'html' : href);
-    // 移動先を調整 idの要素の位置をoffset()で取得して、positionに代入
-    var position = target.offset().top + adjust; 
-    // スムーススクロール linear（等速） or swing（変速）
-    $('body,html').animate({scrollTop:position}, speed, 'swing');
-      return false;
+
+    // スクロール位置を取得
+    var position = target.offset().top + adjust;
+
+    // スムーススクロール実行
+    $('body,html').animate({ scrollTop: position }, speed, 'swing');
+
+    return false; // デフォルトのリンク動作を無効化
   });
 });
   

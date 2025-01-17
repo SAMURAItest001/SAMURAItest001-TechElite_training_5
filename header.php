@@ -23,9 +23,11 @@
       <div class="header_menu">
         <nav>
           <ul class="navigation__list-item-ul">
-            <li><a href="#schedule">スケジュール</a></li> <!-- href="#index.php#schedule">となっていたためスクロールされていなかった  -->
-            <li><a href="#access">アクセス</a></li>  <!-- ref="#index.php#access">となっていたためスクロールされていなかった  -->
-            <li><a href="#reservation">席予約</a></li> <!-- href="#index.php#reservation">となっていたためスクロールされていなかった  -->
+          <?php $baseUrl = './index.php'; // ベースURLを設定 ?>
+          <ul class="navigation__list-item-ul">
+            <li><a href="<?= $baseUrl ?>#schedule">スケジュール</a></li>
+            <li><a href="<?= $baseUrl ?>#access">アクセス</a></li>
+            <li><a href="<?= $baseUrl ?>#reservation">席予約</a></li>
           </ul>
         </nav>
     </div> 
